@@ -147,6 +147,14 @@ The default mode runs each question with thinking both on and off, using fresh c
 exit
 ```
 
+### 1. What each mode does
+
+| Mode | Command | Behavior |
+| --- | --- | --- |
+| **Compare** | `:mode compare` | Runs the same prompt twice: thinking ON and OFF. |
+| **Thinking ON** | `:mode on` | Runs the prompt once with `think=True`. |
+| **Thinking OFF** | `:mode off` | Runs the prompt once with `think=False`. |
+
 After each question, optionally rate answer accuracy as 0 (incorrect), 1 (partially correct), or 2 (correct). Ratings are manual and happen after timing. Results append to `ollama_benchmark_results.csv`, including timings, tool calls/errors, token counts, generation speed, answers, and ratings. There is a limit of six model rounds per trial. The model and service URLs are constants in `ollama_mcp.py`.
 
 ## Verify MCP behavior without Ollama
